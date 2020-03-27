@@ -6,18 +6,34 @@
 </head>
 <body class="back">
     <h1 class="headline">Aaron2412</h1>
-    <centering>This site is under development!</centerting>
+    <div style="text-align: center;">This site is under development!</div>
+    <h2 class="headline">Web Projects</h2>
+    <div class="link">
+        <ul>
+        <li>Web clock: </li>
+        <li><a href="aaron2412.github.io/a-web-clock-test">LINK</a></li>
+        </ul>
+    </div>
 </body>
 <style type="text/css">
+a {text-decoration: none;}
 * {font-family: Menlo}
 .headline {
     margin: 1em;
 }
+.link li {
+    display: inline;
+}
+.link li a {
+    font-weight: bold;
+}
 @media (prefers-color-scheme: dark) {
     .back { background-color: black; color: white;}
+    .link li a {color: white;}
 }
 @media (prefers-color-scheme: light) {
     .back { background-color: white; color: black;}
+    .link li a {color: black;}
 }
 </style>
 </html>
