@@ -1,0 +1,63 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-title" content="Web Clock">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+        <title>Web Clock</title>
+    </head>
+    <body class="back">
+<div class="box">
+        <p class="time title" id="dateTime"></p>
+        <p class="time subt" id="dateYear"></p>
+</div>
+    </body>
+    <style type="text/css">
+.box {
+    width: 2224px;
+    height: 600px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.time {
+    font-family:Menlo;
+    margin: 3px 0;
+}
+.time.title {
+    font-size: 64px;
+}
+.time.subt {
+    font-size: 16px;
+}
+@media (prefers-color-scheme: dark) {
+    .time { color: white;}
+    .back { background-color: black}
+}
+@media (prefers-color-scheme: light) {
+    .time { color: black;}
+    .back { background-color: white}
+}
+    </style>
+    <script>
+Date.prototype.format = function (fmt) {
+    var o = {
+        "y+": this.getFullYear,
+        "M+": this.getMonth(),
+        "d+": this.getDate(),
+        "h+": this.getHours(),
+        "m+": this.getMinutes(),
+        "s+": this.getSeconds()
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+
+}
+setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('hh:mm:ss');", 1000);
+setInterval("document.getElementById('dateYear').innerHTML = (new Date()).format('yyyy/MM/dd');", 1000);
+
+    </script>
+</html>
