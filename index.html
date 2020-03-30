@@ -6,34 +6,41 @@
 </head>
 <body class="back">
     <h1 class="headline">Aaron2412</h1>
-    <div style="text-align: center;">This site is under development!</div>
+    <div class="bar">
+        <ul>
+            <li><a href="https://github.com/Aaron2412/">Github</a></li>
+            <li><a href="https://twitter.com/Aaron___212">Twitter</a></li>
+        </ul>
+    </div>
+    <div style="text-align: center;font-weight:bolder;">This site is under development!</div>
     <h2 class="headline">Web Projects</h2>
     <div class="link">
-        <ul>
-        <li>Web clock: </li>
-        <li><a href="/webclock.html">LINK</a></li>
-        </ul>
+        <a href="https://aaron2412.github.io/webclock.html">Web clock</a>
     </div>
 </body>
 <style type="text/css">
 a {text-decoration: none;}
-* {font-family: Menlo}
+* {font-family: helvetica;}
 .headline {
-    margin: 1em;
+    margin: 1em ;
 }
-.link li {
+.link {
+    margin-left: 2em ;
+}
+.link a {
     display: inline;
 }
-.link li a {
-    font-weight: bold;
+.bar li{
+    display: inline;
+    margin-right: 0.5em;
 }
 @media (prefers-color-scheme: dark) {
     .back { background-color: black; color: white;}
-    .link li a {color: white;}
+    a {color: white;}
 }
 @media (prefers-color-scheme: light) {
     .back { background-color: white; color: black;}
-    .link li a {color: black;}
+    a {color: black;}
 }
 </style>
 </html>
