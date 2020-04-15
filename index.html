@@ -10,23 +10,67 @@
 </head>
 <body class="back">
     <h1 class="headline">Aaron2412</h1>
+    <div id="topbar-wrap">Aaron2412</div>
     <div class="bar">
         <ul>
-            <li><a href="https://github.com/Aaron2412/">Github</a></li>
-            <li><a href="https://twitter.com/Aaron___212">Twitter</a></li>
-            <li><a href="https://gitee.com/Aaron212">Gitee</a></li>
+            <li><a href="https://github.com/Aaron2412/" target="_blank">Github</a></li>
+            <li><a href="https://twitter.com/Aaron___212" target="_blank">Twitter</a></li>
+            <li><a href="https://gitee.com/Aaron212" target="_blank">Gitee</a></li>
         </ul>
     </div>
     <div style="text-align: center;font-weight:bolder;">This site is under development!</div>
     <h2 class="headline">Web Projects</h2>
     <div class="link">
-        <a href="https://aaron2412.github.io/webclock.html">Web clock</a>
-        <a href="https://aaron2412.github.io/blankpage.html">Blank Page</a>
+        <a href="https://aaron2412.github.io/webclock.html" target="_blank">Web clock</a>
+        <a href="https://aaron2412.github.io/blankpage.html" target="_blank">Blank Page</a>
     </div>
+    <div>1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/>
+        1111<br/>1111<br/>1111<br/>1111<br/></div>
 </body>
 <style type="text/css">
 a {text-decoration: none;}
 * {font-family: Consolas, Menlo, helvetica;}
+#topbar-wrap {
+    background-color: black;
+    opacity: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    font-size:32px;
+    font-weight: bold;
+    padding-left:1em;
+}
+
 .headline {
     margin: 1em ;
 }
@@ -44,6 +88,7 @@ a {text-decoration: none;}
 
 @media (max-width: 600px){
     .headline {text-align: center;}
+    .topbar-wrap {text-align: center;}
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,4 +100,15 @@ a {text-decoration: none;}
     a {color: black;}
 }
 </style>
+<script type="text/javascript">
+window.onscroll = function() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop <= 26) {
+        document.getElementById("topbar-wrap").style.opacity = 0;
+    } else {
+        document.getElementById("topbar-wrap").style.opacity = 1;
+    }
+}
+
+</script>
 </html>
