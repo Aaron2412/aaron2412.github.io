@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-title" content="Aaron2412">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
 <body class="back">
     <h1 class="headline">Aaron2412</h1>
     <div id="topbar-wrap"></div>
-    <div id="topbar-text">Aaron2412</div>
+    <div id="topbar-text-l">Aaron2412</div>
+    <div id="topbar-text-r">Powered by github pages　　　</div>
     <div class="bar">
         <ul>
             <li><a href="https://github.com/Aaron2412/" target="_blank">Github</a></li>
@@ -63,6 +64,19 @@ a {text-decoration: none;}
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 99997;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    font-size:32px;
+    font-weight: bold;
+    
+}
+#topbar-text-l {
+    opacity: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
     z-index: 99998;
     height: 50px;
     line-height: 50px;
@@ -70,19 +84,19 @@ a {text-decoration: none;}
     font-size:32px;
     font-weight: bold;
     padding-left:1em;
+    
 }
-#topbar-text {
+#topbar-text-r {
     opacity: 0;
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 99999;
+    z-index: 99998;
     height: 50px;
     line-height: 50px;
-    text-align: left;
-    font-size:32px;
-    font-weight: bold;
-    padding-left:1em;
+    text-align: right;
+    font-size: 12px;
+    
 }
 .headline {
     margin: 1em ;
@@ -120,10 +134,18 @@ window.onscroll = function() {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop <= 26) {
         document.getElementById("topbar-wrap").style.opacity = 0;
-        document.getElementById("topbar-text").style.opacity = 0;
+        document.getElementById("topbar-text-l").style.opacity = 0;
+        
+        document.getElementById("topbar-text-r").style.opacity = 0;
     } else {
         document.getElementById("topbar-wrap").style.opacity = 0.9;
-        document.getElementById("topbar-text").style.opacity = 1;
+        document.getElementById("topbar-text-l").style.opacity = 1;
+        if (window.innerWidth<=600) {
+            document.getElementById("topbar-text-r").style.opacity = 0;
+        } else {
+            document.getElementById("topbar-text-r").style.opacity = 1;
+        }
+        
     }
 }
 
