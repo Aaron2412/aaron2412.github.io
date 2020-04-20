@@ -7,13 +7,12 @@ a {
 }
 
 #topbar-wrap {
-    opacity: 0;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 99997;
     height: 50px;
-    line-height: 50px;
+    line-height: 75px;
     text-align: left;
     font-size: 32px;
     font-weight: bold;
@@ -21,30 +20,16 @@ a {
 }
 
 #topbar-text-l {
-    opacity: 0;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 99998;
-    height: 50px;
+    height: 40px;
     line-height: 50px;
     text-align: left;
     font-size: 32px;
     font-weight: bold;
     padding-left: 1em;
-
-}
-
-#topbar-text-r {
-    opacity: 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 99998;
-    height: 50px;
-    line-height: 50px;
-    text-align: right;
-    font-size: 12px;
 
 }
 
