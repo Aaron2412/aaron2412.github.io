@@ -7,3 +7,12 @@ function GetQueryString(name) {
 if (GetQueryString("alert") == "true") {
     alert("API IS TRIGGERED")
 }
+
+var webpa = GetQueryString("webproject")
+if (webpa != null) {
+    window.location.href="/webProjects/"+webpa+".html"
+}
+
+if (GetQueryString("emerexit") == "true" ){
+    window.location.href="about:blank"
+}
