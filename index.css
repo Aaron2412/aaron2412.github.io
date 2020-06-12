@@ -6,7 +6,7 @@ a {
     font-family: Consolas, Menlo, helvetica;
 }
 
-#topbar-wrap {
+.topbar-wrap {
     width: 100%;
     position: fixed;
     top: 0;
@@ -19,7 +19,7 @@ a {
 
 }
 
-#topbar-text-l {
+.topbar-text-l {
     width: 100%;
     position: fixed;
     top: 0;
@@ -33,6 +33,10 @@ a {
 
 }
 
+.topbar-blank {
+    top: 30px;
+}
+
 .headline {
     margin: 1em;
 }
@@ -41,12 +45,12 @@ a {
     margin-left: 2em;
 }
 
-.link a {
+.link span {
     display: inline;
     margin-right: 1em;
 }
 
-.bar li {
+.bar span {
     display: inline;
     margin-right: 0.5em;
 }
